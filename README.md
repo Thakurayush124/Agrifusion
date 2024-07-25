@@ -22,7 +22,7 @@ Crop Counting Model: Utilizes video frames to detect and count crops, aiding in 
 Disease Detection Model: Analyzes plant images to detect signs of diseases, providing early warnings for farmers.
 
 **********************************************************************************************************************************************************************************************
-  NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff not we can provide you the material in 
+  NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff but we can provide you the material in 
   case of need
 **********************************************************************************************************************************************************************************************  
 
