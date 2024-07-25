@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Fusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-wheat-awn"></i> Agri Fusion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="agrifusion.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html">Library</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Crops
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="news.html">News</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search Disease</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="container text-center mt-5">
+        <h2>Boost Your Crop Production</h2>
+    </div>
+    <div class="container mt-5 d-flex flex-wrap justify-content-around align-items-center text-center">
+        <div>
+            <h4>Diagnose Your Sick Crop</h4>
+            <p>Take a photo of your sick crop and get a free diagnosis and treatment suggestions - all in a few
+                seconds..!</p>
+            <button class="btn btn-dark" onclick="triggerFileInput()">Get a Free Diagnosis</button>
+            <input type="file" id="fileInput" accept="image/*" capture="environment" style="display:none;">
+        </div>
+        <div>
+            <video src="farmer-app-screen-1.mp3" loop autoplay muted class="w-100"></video>
+        </div>
+    </div>
+    <div class="container mt-5 d-flex flex-wrap justify-content-around align-items-center text-center">
+        <div>
+            <video src="farmer-app-screen-2.mp3" loop autoplay muted class="w-100"></video>
+        </div>
+        <div>
+            <h4>Find the Right Treatment</h4>
+            <p><i class="fa-solid fa-arrows-to-dot"></i> Get the best treatment for your crops from your local area.</p>
+            <p><i class="fa-solid fa-arrows-to-dot"></i> Ensure healthy growth and high yield with expert agricultural
+                solutions.</p>
+            <p><i class="fa-solid fa-arrows-to-dot"></i> Partner with trusted local providers to maximize your crop's
+                potential.</p>
+            <button class="btn btn-dark">Get AgriFusion</button>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 image-container">
+                <img src="farmer-pic-1.png" class="img-fluid rounded-start" alt="Farmer picture">
+            </div>
+        </div>
+    </div>
+    <div class="col-md-8 d-flex align-items-center">
+        <div class="card-body">
+            <h5 class="card-title">Agri Fusion App</h5>
+            <p class="card-text">"With the AgriFusion app, you get free access to all helpful information about your
+                sick crop, so you do not have to call a professional agricultural expert to your field."</p>
+            <button class="btn btn-dark">Get The App</button>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- footer -->
+    <footer class="bg-light text-center py-4">
+        <div>
+            <div class="mb-3">
+                <a href="#" class="text-dark me-3"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="text-dark me-3"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="text-dark"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <div class="mb-2">&copy; Agri-Fusion Private Limited</div>
+            <div>
+                <a href="/privacy" class="text-dark me-3">Privacy</a>
+                <a href="/terms" class="text-dark">Terms</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        function triggerFileInput() {
+            document.getElementById('fileInput').click();
+        }
+
+        document.getElementById('fileInput').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            if (file) {
+                console.log('File selected:', file);
+            }
+        });
+    </script>
+</body>
+
+</html>

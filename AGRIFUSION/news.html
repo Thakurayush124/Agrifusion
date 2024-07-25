@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plantix Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Add styles from Blog.css and dc.css here */
+        /* This is a placeholder. You should replace this with the actual content of your CSS files */
+        .container { max-width: 1200px; margin: 0 auto; }
+        .card { border: 1px solid #ddd; margin: 10px; padding: 10px; }
+        .pagination { display: flex; justify-content: center; margin-top: 20px; }
+        .page-number { margin: 0 5px; cursor: pointer; }
+        .active { font-weight: bold; }
+        /* Add more styles as needed */
+    </style>
+</head>
+<body>
+    <div class="app">
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <img src="./plantix-logo-color-en.svg" alt="Plantix" class="logo">
+            </div>
+            <div class="navbar-menu">
+                <a href="#app">App</a>
+                <a href="#library">Library</a>
+                <a href="#news">News</a>
+                <a href="#company">Company</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Business ▼</button>
+                    <div class="dropdown-content">
+                        <!-- Add dropdown items here -->
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-buttons">
+                <button class="btn btn-light">For retailers</button>
+                <button class="btn btn-link">Find products</button>
+                <button class="btn btn-primary">Get the app</button>
+            </div>
+        </nav>
+
+        <div class="content">
+            <div class="breadcrumb">
+                <span>Blog</span>
+                <span class="separator">›</span>
+                <span class="active">All Articles</span>
+            </div>
+
+            <div class="search-filters">
+                <div class="search-box">
+                    <input type="text" placeholder="Search">
+                    <button class="search">🔍</button>
+                </div>
+                <div class="filter">
+                    <select>
+                        <option>Filter by tags</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <select>
+                        <option>Filter by category</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- C component content -->
+        <div class="container">
+            <h2><span id="totalItems"></span> results found</h2>
+            
+            <div id="resultGrid" class="result-grid">
+                <!-- Cards will be dynamically inserted here -->
+            </div>
+            
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be dynamically inserted here -->
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="logo-section">
+                    <h2>Plantix</h2>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-column">
+                        <h3>For farmers</h3>
+                        <a href="#">Plantix app</a>
+                        <a href="#">Find products</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>For agri-retailers</h3>
+                        <a href="#">Plantix Partner app</a>
+                        <a href="#">Create online shop</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>For businesses</h3>
+                        <a href="#">Plantix Vision API</a>
+                        <a href="#">Plantix Groundtruthing</a>
+                    </div>
+                    <div class="link-column">
+                        <h3>Company</h3>
+                        <a href="#">Job offers</a>
+                        <a href="#">Press and media</a>
+                    </div>
+                </div>
+                
+                <div class="social-and-download">
+                    <div class="social-icons">
+                        <a href="#" class="social-icon">IG</a>
+                        <a href="#" class="social-icon">YT</a>
+                        <a href="#" class="social-icon">FB</a>
+                        <a href="#" class="social-icon">TW</a>
+                        <a href="#" class="social-icon">LI</a>
+                    </div>
+                    <div class="google-play-badge">
+                        Get it on Google Play
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">© 2024 Plantix</div>
+                <div class="legal-links">
+                    <a href="#">Imprint</a>
+                    <a href="#">Privacy notice</a>
+                    <a href="#">Terms of use</a>
+                    <a href="#">Manage cookies</a>
+                </div>
+                <div class="language-selector">
+                    <span>🌐</span>
+                    <select>
+                        <option value="en">En</option>
+                    </select>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const totalItems = 97;
+        const itemsPerPage = 8;
+        let currentPage = 1;
+        let results = [];
+
+        function generateRandomDate() {
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            const month = months[Math.floor(Math.random() * 12)];
+            const day = Math.floor(Math.random() * 28) + 1;
+            const year = 2023;
+            return `${day} ${month} ${year}`;
+        }
+
+        function generateRandomData() {
+            for (let i = 0; i < totalItems; i++) {
+                results.push({
+                    id: i,
+                    date: generateRandomDate(),
+                    title: `Random Title ${Math.floor(Math.random() * 1000)}`,
+                    description: 'This is a random description for the card. It can contain various details about the item.'
+                });
+            }
+        }
+
+        function createCard(item) {
+            return `
+                <div class="card">
+                    <img src="https://picsum.photos/300/200?random=${Math.random()}" alt="Random">
+                    <div class="card-content">
+                        <div class="card-date">${item.date}</div>
+                        <h3 class="card-title">${item.title}</h3>
+                        <p class="card-description">${item.description}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCards() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const currentItems = results.slice(startIndex, endIndex);
+
+            const resultGrid = document.getElementById('resultGrid');
+            resultGrid.innerHTML = currentItems.map(createCard).join('');
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            let paginationHTML = `
+                <button onclick="changePage(${currentPage - 1})" ${currentPage === 1 ? 'disabled' : ''}>&lt;</button>
+            `;
+
+            for (let i = 1; i <= totalPages; i++) {
+                paginationHTML += `
+                    <span class="page-number ${i === currentPage ? 'active' : ''}" onclick="changePage(${i})">${i}</span>
+                `;
+            }
+
+            paginationHTML += `
+                <button onclick="changePage(${currentPage + 1})" ${currentPage === totalPages ? 'disabled' : ''}>&gt;</button>
+            `;
+
+            document.getElementById('pagination').innerHTML = paginationHTML;
+        }
+
+        function changePage(newPage) {
+            const totalPages = Math.ceil(totalItems / itemsPerPage);
+            if (newPage >= 1 && newPage <= totalPages) {
+                currentPage = newPage;
+                renderCards();
+                renderPagination();
+            }
+        }
+
+        function init() {
+            generateRandomData();
+            document.getElementById('totalItems').textContent = totalItems;
+            renderCards();
+            renderPagination();
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+</html>

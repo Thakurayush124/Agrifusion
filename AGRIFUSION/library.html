@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri Fusion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .main-div1 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        .ss {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .ss img {
+            height: 300px;
+            width: 300px;
+            border-radius: 30px;
+        }
+        .ss h3 {
+            margin-top: 10px;
+            font-size: 1.25rem;
+        }
+        .ss p {
+            margin: 5px 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 992px) {
+            .main-div1 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .ss img {
+                height: 200px;
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-div1 {
+                grid-template-columns: 1fr;
+            }
+            .ss img {
+                height: 150px;
+                width: 150px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand, .nav-link, .f-info-brand, .f-info-links a {
+                font-size: 14px;
+            }
+            .ss h3 {
+                font-size: 1rem;
+            }
+            .ss p, .ss i {
+                font-size: 0.875rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-wheat-awn"></i> Agri Fusion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="agrifusion.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="library.html">Library</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Crops
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-disabled="true">News</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search Disease</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="main-div1" id="library">
+        <div class="ss">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkpXlbzxLyoMqua0W83MCJmhIAEuna3LB54g&s" alt="Rice">
+            <h3>Rice - Bacterial Leaf Blight</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Common in wet climates</i>
+            </div>
+            <i>Symptoms: Yellowing and wilting of leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSb041gEIHyj45Qu9K7TWzNTl0ALpwQwjev1MuLRtuUTz9ZfGOh" alt="Tomato">
+            <h3>Tomato - Early Blight</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Alternaria solani</i>
+            </div>
+            <i>Symptoms: Dark spots on leaves and fruits</i>
+        </div>
+        <div class="ss">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIadmek3Qyq6kGjzYWZJs2K1nPO6DFgk96tA&s" alt="Wheat">
+            <h3>Wheat - Powdery Mildew</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Blumeria graminis</i>
+            </div>
+            <i>Symptoms: White powdery spots on leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://www.planetnatural.com/wp-content/uploads/2012/12/fire-blight-apple-tree.jpg" alt="Apple">
+            <h3>Apple - Fire Blight</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Erwinia amylovora</i>
+            </div>
+            <i>Symptoms: Blackened shoots and branches</i>
+        </div>
+        <div class="ss">
+            <img src="https://www.agric.wa.gov.au/sites/gateway/files/Late%20blight%20tuber%20infection.jpg" alt="Potato">
+            <h3>Potato - Late Blight</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Phytophthora infestans</i>
+            </div>
+            <i>Symptoms: Brown lesions on leaves and stems</i>
+        </div>
+        <div class="ss">
+            <img src="https://www.apsnet.org/edcenter/disandpath/oomycete/pdlessons/Article%20Images/DownyMildewGrape07.jpg" alt="Grapes">
+            <h3>Grapes - Downy Mildew</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Plasmopara viticola</i>
+            </div>
+            <i>Symptoms: Yellow spots on leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://www.cdfa.ca.gov/citrus/images/ccd_usda.jpg" alt="Orange">
+            <h3>Orange - Citrus Canker</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Xanthomonas axonopodis</i>
+            </div>
+            <i>Symptoms: Raised lesions on leaves and fruits</i>
+        </div>
+        <div class="ss">
+            <img src="https://www.shutterstock.com/image-photo/dry-branch-yellow-beginning-dead-260nw-642669865.jpg" alt="Banana">
+            <h3>Banana - Panama Disease</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Fusarium oxysporum</i>
+            </div>
+            <i>Symptoms: Yellowing and wilting of leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://us-central1-plantix-8e0ce.cloudfunctions.net/v1/image/w400/8861dfc6-8726-4d5f-8633-1286e098ffcf" alt="Soybean">
+            <h3>Soybean - Soybean Mosaic Virus</h3>
+            <div>
+                <p>Viral Disease</p>
+                <hr>
+                <i>Transmitted by aphids</i>
+            </div>
+            <i>Symptoms: Mottled leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://lh3.googleusercontent.com/proxy/VWcWj9xHjpoiZqFFsWh-mbhYi79-r-frxGOe2CCwIBw6M4flXHaPC2YmuFZHC-v9G3R-2nBC2k7_WZtzfGGT2yPnfdd89aRKaR004dtFO2IC-9JB4Z9M" alt="Rice">
+            <h3>Rice - Rice Blast</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Magnaporthe oryzae</i>
+            </div>
+            <i>Symptoms: Lesions on leaves and stems</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://content.peat-cloud.com/w400/wheat-stem-rust-wheat-1.jpg" alt="Wheat">
+            <h3>Wheat - Wheat Rust</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Puccinia species</i>
+            </div>
+            <i>Symptoms: Rust-colored pustules on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://gardenerspath.com/wp-content/uploads/2021/07/Identify-and-Treat-Late-Blight-on-Tomatoes-FB.jpg" alt="Tomato">
+            <h3>Tomato - Late Blight</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Phytophthora infestans</i>
+            </div>
+            <i>Symptoms: Dark lesions on leaves and stems</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.agrifarming.in/wp-content/uploads/2022/10/How-to-Get-Rid-of-Potato-Scab-1-1024x768.jpg" alt="Potato">
+            <h3>Potato - Potato Scab</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Streptomyces scabies</i>
+            </div>
+            <i>Symptoms: Scab-like lesions on tubers</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.apsnet.org/edcenter/disandpath/fungalasco/pdlessons/PublishingImages/AppleScab01sm.jpg" alt="Apple">
+            <h3>Apple - Apple Scab</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Venturia inaequalis</i>
+            </div>
+            <i>Symptoms: Dark, scabby spots on leaves and fruit</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjlyiD6-VzcpM9GqmJ9v3oq7Ho_Z-0Gl_cAw&usqp=CAU" alt="Banana">
+            <h3>Banana - Panama Disease</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Fusarium oxysporum f.sp. cubense</i>
+            </div>
+            <i>Symptoms: Yellowing and wilting of leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.evineyardapp.com/blog/wp-content/uploads/2015/08/powdery-mildew-on-grapes.jpg" alt="Grapevine">
+            <h3>Grapevine - Powdery Mildew</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Erysiphe necator</i>
+            </div>
+            <i>Symptoms: White powdery spots on leaves and stems</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://i0.wp.com/citrusindustry.net/wp-content/uploads/2021/02/IMG_20190117_105208-scaled.jpg?fit=2560%2C1920&ssl=1" alt="Orange">
+            <h3>Orange - Citrus Canker</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Xanthomonas axonopodis</i>
+            </div>
+            <i>Symptoms: Raised lesions on leaves, stems, and fruit</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://cdn.mos.cms.futurecdn.net/FMRqieFVHEpFrdXcWzvxZU.jpg" alt="Strawberry">
+            <h3>Strawberry - Gray Mold</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Botrytis cinerea</i>
+            </div>
+            <i>Symptoms: Gray mold on fruit</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWvA5LMM0PmC7wSgT8z5-5FYTYWqL1jv78YA&usqp=CAU" alt="Lettuce">
+            <h3>Lettuce - Downy Mildew</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Bremia lactucae</i>
+            </div>
+            <i>Symptoms: Yellowing and necrosis of leaves</i>
+        </div>
+        <div class="ss">
+            <img src="https://blogs.cornell.edu/ccefieldcropnews/files/2019/08/CLB-Footer.png" alt="Corn">
+            <h3>Corn - Southern Corn Leaf Blight</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Bipolaris maydis</i>
+            </div>
+            <i>Symptoms: Elongated lesions on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://aggie-horticulture.tamu.edu/wp-content/uploads/sites/10/2011/11/angular1.jpg" alt="Cucumber">
+            <h3>Cucumber - Angular Leaf Spot</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Pseudomonas syringae pv. lachrymans</i>
+            </div>
+            <i>Symptoms: Water-soaked spots on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.planetnatural.com/wp-content/uploads/2021/12/peach-leaf-curl-disease.jpg" alt="Peach">
+            <h3>Peach - Peach Leaf Curl</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Taphrina deformans</i>
+            </div>
+            <i>Symptoms: Red, thickened, and curled leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://extension.umn.edu/sites/extension.umn.edu/files/bacterial-spots-pepper.jpg" alt="Pepper">
+            <h3>Pepper - Bacterial Spot</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Xanthomonas campestris pv. vesicatoria</i>
+            </div>
+            <i>Symptoms: Small, water-soaked spots on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://extension.usu.edu/planthealth/ipm/images/agricultural/vegetables/Alternaria-Leaf-blight-carrot-4.jpg" alt="Carrot">
+            <h3>Carrot - Alternaria Leaf Blight</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Alternaria dauci</i>
+            </div>
+            <i>Symptoms: Brown lesions on leaves and stems</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1N-wuKIeZJTTow3uBrOX6yZaDahMbnApeAuKyXxGetU4Xs4CihEO0tSBuhAeIzaRYzkA&usqp=CAU" alt="Onion">
+            <h3>Onion - Onion Smut</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Urocystis cepulae</i>
+            </div>
+            <i>Symptoms: Black streaks on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://idtools.org/citrus_diseases/images/GSLEAVES_TG_cs.jpg" alt="Lemon">
+            <h3>Lemon - Greasy Spot</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Mycosphaerella citri</i>
+            </div>
+            <i>Symptoms: Oily spots on leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://plantwiseplusknowledgebank.org/cms/asset/8b70730b-a0c4-4f9d-9d1a-aac176608df6/anthracnose-of-mango-pakistan-1.png" alt="Mango">
+            <h3>Mango - Anthracnose</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Colletotrichum gloeosporioides</i>
+            </div>
+            <i>Symptoms: Black spots on leaves and fruit</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://barmac.com.au/wp-content/uploads/sites/3/2016/01/Heart-Rot-Pineapple.jpg" alt="Pineapple">
+            <h3>Pineapple - Heart Rot</h3>
+            <div>
+                <p>Bacterial Disease</p>
+                <hr>
+                <i>Caused by Erwinia chrysanthemi</i>
+            </div>
+            <i>Symptoms: Rotting of the central leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://ucanr.edu/blogs/strawberries_caneberries//blogfiles/91058_original.jpg" alt="Strawberry">
+            <h3>Strawberry - Verticillium Wilt</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Verticillium dahliae</i>
+            </div>
+            <i>Symptoms: Wilting and yellowing of leaves</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.hiltonpond.org/images/CherryBlackKnot01.jpg" alt="Cherry">
+            <h3>Cherry - Black Knot</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Apiosporina morbosa</i>
+            </div>
+            <i>Symptoms: Black, swollen galls on branches</i>
+        </div>
+        
+        <div class="ss">
+            <img src="https://www.simplyseed.co.uk/user/blog-images/What%20are%20Clubroot%20Resistant%20Seeds.webp" alt="Cabbage">
+            <h3>Cabbage - Clubroot</h3>
+            <div>
+                <p>Fungal Disease</p>
+                <hr>
+                <i>Caused by Plasmodiophora brassicae</i>
+            </div>
+            <i>Symptoms: Swollen roots, stunted growth</i>
+        </div>
+    </div>
+        <!-- footer -->
+        <footer>
+            <div class="f-info">
+                <div class="f-info-socials">
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+                <div class="f-info-brand">&copy; Agri-Fusion Private Limited</div>
+                <div class="f-info-links">
+                    <a href="/privacy">Privacy</a>
+                    <a href="/terms">Terms</a>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>
