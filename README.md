@@ -13,8 +13,16 @@ Customizable Alerts: Provides alerts and notifications for disease outbreaks, so
 Data Visualization: Generates visual reports and dashboards for easy interpretation of soil and crop health data.
 Integration with Farming Equipment: Connects with smart farming equipment for automated responses based on AI recommendations.
 Historical Data Analysis: Analyzes historical data to predict future trends and improve farming strategies.
+
+
 Models
 Soil Analysis Model: Assesses soil health through various indicators like moisture levels, nutrient content, and pH balance.
 Texture Analysis Model: Builds a comprehensive database of plant textures for accurate identification.
 Crop Counting Model: Utilizes video frames to detect and count crops, aiding in monitoring plant growth and estimating yield.
 Disease Detection Model: Analyzes plant images to detect signs of diseases, providing early warnings for farmers.
+
+**********************************************************************************************************************************************************************************************
+  NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff not we can provide you the material in 
+  case of need
+**********************************************************************************************************************************************************************************************  
+
