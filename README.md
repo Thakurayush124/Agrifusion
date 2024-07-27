@@ -23,6 +23,8 @@ Disease Detection Model: Analyzes plant images to detect signs of diseases, prov
 
 **********************************************************************************************************************************************************************************************
   NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff but we can provide you the material in 
-  case of need
+  case of need.
+
+  Before accessing the material from the repo you should download the zip or clone it and open it on ypur desired softwares.
 **********************************************************************************************************************************************************************************************  
 
