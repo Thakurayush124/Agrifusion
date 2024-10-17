@@ -21,6 +21,9 @@ Texture Analysis Model: Builds a comprehensive database of plant textures for ac
 Crop Counting Model: Utilizes video frames to detect and count crops, aiding in monitoring plant growth and estimating yield.
 Disease Detection Model: Analyzes plant images to detect signs of diseases, providing early warnings for farmers.
 
+IBM Technologoes used
+IBM Cloud:https://eu-de.dataplatform.cloud.ibm.com/projects/2d3214e7-8bac-4645-bf01-85c8e450c292?context=cpdaas
+
 **********************************************************************************************************************************************************************************************
   NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff but we can provide you the material in 
   case of need.
