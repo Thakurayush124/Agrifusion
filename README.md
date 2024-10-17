@@ -22,6 +22,7 @@ Crop Counting Model: Utilizes video frames to detect and count crops, aiding in 
 Disease Detection Model: Analyzes plant images to detect signs of diseases, providing early warnings for farmers.
 
 IBM Technologoes used
+
 IBM Cloud:https://eu-de.dataplatform.cloud.ibm.com/projects/2d3214e7-8bac-4645-bf01-85c8e450c292?context=cpdaas
 
 **********************************************************************************************************************************************************************************************
