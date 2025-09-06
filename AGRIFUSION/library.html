@@ -8,30 +8,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        .navbar {
+            background-color: #4CAF50;
+        }
+
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+
+        .navbar-toggler {
+            border-color: white;
+        }
+
         .main-div1 {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px;
             padding: 20px;
         }
+
         .ss {
             border: 1px solid #ddd;
-            padding: 10px;
-            border-radius: 5px;
+            border-radius: 10px;
             text-align: center;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
+        .ss:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
         .ss img {
             height: 300px;
             width: 300px;
-            border-radius: 30px;
+            border-radius: 10px;
         }
+
         .ss h3 {
             margin-top: 10px;
             font-size: 1.25rem;
+            color: #333;
         }
+
         .ss p {
             margin: 5px 0;
             font-size: 1rem;
+            color: #555;
+        }
+
+        .ss i {
+            color: #777;
         }
 
         @media (max-width: 992px) {
@@ -54,21 +88,48 @@
             }
         }
 
-        @media (max-width: 576px) {
-            .navbar-brand, .nav-link, .f-info-brand, .f-info-links a {
-                font-size: 14px;
-            }
-            .ss h3 {
-                font-size: 1rem;
-            }
-            .ss p, .ss i {
-                font-size: 0.875rem;
-            }
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .f-info-socials i {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .f-info-socials i:hover {
+            color: #ddd;
+        }
+
+        .f-info-links a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .f-info-links a:hover {
+            text-decoration: underline;
+        }
+
+        button.btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+        }
+
+        button.btn:hover {
+            background-color: #45a049;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#"><i class="fa-solid fa-wheat-awn"></i> Agri Fusion</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -99,7 +160,7 @@
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search Disease</button>
+                    <button class="btn" type="submit">Search Disease</button>
                 </form>
             </div>
         </div>
@@ -436,20 +497,20 @@
             <i>Symptoms: Swollen roots, stunted growth</i>
         </div>
     </div>
-        <!-- footer -->
-        <footer>
-            <div class="f-info">
-                <div class="f-info-socials">
-                    <i class="fa-brands fa-square-facebook"></i>
-                    <i class="fa-brands fa-instagram"></i>
-                    <i class="fa-brands fa-linkedin"></i>
-                </div>
-                <div class="f-info-brand">&copy; Agri-Fusion Private Limited</div>
-                <div class="f-info-links">
-                    <a href="/privacy">Privacy</a>
-                    <a href="/terms">Terms</a>
-                </div>
+    <!-- footer -->
+    <footer>
+        <div class="f-info">
+            <div class="f-info-socials">
+                <i class="fa-brands fa-square-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
             </div>
-        </footer>
+            <div class="f-info-brand">&copy; Agri-Fusion Private Limited</div>
+            <div class="f-info-links">
+                <a href="/privacy">Privacy</a>
+                <a href="/terms">Terms</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
