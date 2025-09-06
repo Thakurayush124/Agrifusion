@@ -30,4 +30,4 @@ IBM Cloud:https://eu-de.dataplatform.cloud.ibm.com/projects/2d3214e7-8bac-4645-b
   case of need.
 
   Before accessing the material from the repo you should download the zip or clone it and open it on ypur desired softwares.
-*******************************************************************************************************************************************************************************************
+
