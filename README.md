@@ -29,5 +29,5 @@ IBM Cloud:https://eu-de.dataplatform.cloud.ibm.com/projects/2d3214e7-8bac-4645-b
   NOTE:- OUR Soil anlaysis and plant counting model are ready and working but due to large size constraints we were not able to push there code and stuff but we can provide you the material in 
   case of need.
 
-  Before accessing the material from the repo you should download the zip or clone it and open it on ypur desired softwares.
+  Before accessing the material from the repo you should download the zip or clone it and open it on ypur desired softwares.   
 
